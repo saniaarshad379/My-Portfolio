@@ -5,22 +5,26 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #ffffff;
 }
 
+/* Container */
+
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     padding: 0 20px;
 }
+
+/* Navbar */
 
 .navbar {
     background: #2c3e50;
     color: white;
-    padding: 1rem 0;
+    padding: 20px 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -35,109 +39,241 @@ body {
 
 .logo h2 {
     color: #3498db;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 25px;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
-    background: #3498db;
+    color: #3498db;
 }
 
+/* Hero Section */
+
 .hero {
+    height: 100vh;
+
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
     color: white;
-    padding: 150px 0 100px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
     text-align: center;
+
+    padding-top: 80px;
+}
+
+.hero-content {
+    margin-top: 40px;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 4rem;
+    margin-bottom: 20px;
 }
 
 .highlight {
     color: #f39c12;
 }
 
+.hero-text {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
 .cta-button {
     background: #e74c3c;
     color: white;
-    padding: 12px 30px;
+    padding: 15px 35px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    margin-top: 2rem;
+    margin-top: 30px;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
-.about, .skills, .projects, .contact {
-    padding: 80px 0;
+.cta-button:hover {
+    background: #c0392b;
+}
+
+/* Sections */
+
+.about,
+.skills,
+.projects,
+.contact {
+    padding: 100px 0;
 }
 
 h2 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 3rem;
+    margin-bottom: 50px;
     color: #2c3e50;
 }
 
-.skills-grid, .projects-grid, .contact-info {
+/* Skills */
+
+.skills-grid,
+.projects-grid,
+.contact-info {
     display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+
+    gap: 30px;
 }
 
-.skill-item, .project-card, .contact-item {
+.skill-item,
+.project-card,
+.contact-item {
     background: #f8f9fa;
-    padding: 2rem;
-    border-radius: 10px;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
     text-align: center;
+
+    transition: 0.3s;
 }
+
+.skill-item:hover,
+.project-card:hover,
+.contact-item:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Skill Bars */
 
 .skill-bar {
-    background: #e0e0e0;
+    background: #ddd;
+
     border-radius: 20px;
+
     height: 20px;
-    margin-top: 1rem;
+
+    margin-top: 15px;
 }
 
 .skill-level {
     background: #3498db;
+
     height: 100%;
+
     border-radius: 20px;
+
     color: white;
+
     text-align: right;
+
     padding-right: 10px;
-    font-size: 0.8rem;
+
+    font-size: 12px;
+
     line-height: 20px;
 }
 
-.c-language { width: 85%; }
-.cpp { width: 80%; }
-.python { width: 75%; }
+.c-language {
+    width: 85%;
+}
+
+.cpp {
+    width: 80%;
+}
+
+.python {
+    width: 75%;
+}
+
+.htmlcss {
+    width: 70%;
+}
+
+.github {
+    width: 75%;
+}
+
+.communication {
+    width: 85%;
+}
+
+/* Project Tags */
 
 .tech {
     background: #3498db;
+
     color: white;
-    padding: 5px 15px;
+
+    padding: 6px 15px;
+
     border-radius: 20px;
-    font-size: 0.9rem;
+
+    font-size: 14px;
 }
+
+/* Project Links */
+
+.project-card a {
+    text-decoration: none;
+
+    color: #3498db;
+
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    color: #2c3e50;
+}
+
+/* Footer */
 
 footer {
     background: #2c3e50;
+
     color: white;
+
     text-align: center;
-    padding: 2rem 0;
+
+    padding: 30px 0;
+
+    margin-top: 50px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
 }
